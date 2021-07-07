@@ -1,0 +1,68 @@
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.exe.config
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.exe
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.pdb
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\bin\Debug\MySql.Data.dll
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmCASHIER.resources
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmCASHIER_UPDATEITEM.resources
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmMAIN.resources
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.Properties.Resources.resources
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csproj.GenerateResource.Cache
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.exe
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.pdb
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csprojResolveAssemblyReference.cache
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmINVENTORY.resources
+C:\Users\ODF\documents\visual studio 2013\Projects\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_INVENTORY.resources
+F:\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.exe.config
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csprojResolveAssemblyReference.cache
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_INVENTORY.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_STOCKS.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_VENDOR.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmCASHIER.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmDASHBOARD.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmLOGIN.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmMAIN.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmINVENTORY.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmMAIN0.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmPRINT.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmQUANTITY.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSIGNUP.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSPLASH.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSTOCKS.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmVENDOR.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.Properties.Resources.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csproj.GenerateResource.Cache
+F:\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.exe
+F:\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.pdb
+F:\AviariaPOS\AviariaPOS\bin\Debug\BouncyCastle.Crypto.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.Core.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\Guna.UI.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\Guna.UI2.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.barcodes.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.forms.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.io.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.kernel.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.layout.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.pdfa.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.sign.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.styledxmlparser.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.svg.dll
+F:\AviariaPOS\AviariaPOS\bin\Debug\BouncyCastle.Crypto.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.pdb
+F:\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.Core.pdb
+F:\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.Core.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.barcodes.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.forms.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.io.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.kernel.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.layout.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.pdfa.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.sign.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.styledxmlparser.xml
+F:\AviariaPOS\AviariaPOS\bin\Debug\itext.svg.xml
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.exe
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.pdb
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmACCOUNT.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_ACCOUNTS.resources

@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{612A94E2-26C5-4923-BA56-FEA7004D5792}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AviariaPOS</RootNamespace>
+    <AssemblyName>AviariaPOS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.10\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes">
+      <HintPath>..\packages\itext7.7.1.15\lib\net45\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=7.1.15.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\itext7.7.1.15\lib\net45\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=7.1.15.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\itext7.7.1.15\lib\net45\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=7.1.15.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\itext7.7.1.15\lib\net45\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=7.1.15.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\itext7.7.1.15\lib\net45\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa">
+      <HintPath>..\packages\itext7.7.1.15\lib\net45\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign">
+      <HintPath>..\packages\itext7.7.1.15\lib\net45\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser">
+      <HintPath>..\packages\itext7.7.1.15\lib\net45\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg">
+      <HintPath>..\packages\itext7.7.1.15\lib\net45\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Desktop\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmACCOUNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmACCOUNT.Designer.cs">
+      <DependentUpon>frmACCOUNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmADD_EDIT_ACCOUNTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmADD_EDIT_ACCOUNTS.Designer.cs">
+      <DependentUpon>frmADD_EDIT_ACCOUNTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmADD_EDIT_INVENTORY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmADD_EDIT_INVENTORY.Designer.cs">
+      <DependentUpon>frmADD_EDIT_INVENTORY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmADD_EDIT_STOCKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmADD_EDIT_STOCKS.Designer.cs">
+      <DependentUpon>frmADD_EDIT_STOCKS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmADD_EDIT_VENDOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmADD_EDIT_VENDOR.Designer.cs">
+      <DependentUpon>frmADD_EDIT_VENDOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCASHIER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCASHIER.Designer.cs">
+      <DependentUpon>frmCASHIER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDASHBOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDASHBOARD.Designer.cs">
+      <DependentUpon>frmDASHBOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLOGIN.Designer.cs">
+      <DependentUpon>frmLOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMAIN.Designer.cs">
+      <DependentUpon>frmMAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmINVENTORY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINVENTORY.Designer.cs">
+      <DependentUpon>frmINVENTORY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xfrmMAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xfrmMAIN.Designer.cs">
+      <DependentUpon>xfrmMAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPRINT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPRINT.Designer.cs">
+      <DependentUpon>frmPRINT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmADD_PRODUCTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmADD_PRODUCTS.Designer.cs">
+      <DependentUpon>frmADD_PRODUCTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQUANTITY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQUANTITY.Designer.cs">
+      <DependentUpon>frmQUANTITY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSIGNUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSIGNUP.Designer.cs">
+      <DependentUpon>frmSIGNUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSPLASH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSPLASH.Designer.cs">
+      <DependentUpon>frmSPLASH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSTOCKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSTOCKS.Designer.cs">
+      <DependentUpon>frmSTOCKS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVENDOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVENDOR.Designer.cs">
+      <DependentUpon>frmVENDOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmACCOUNT.resx">
+      <DependentUpon>frmACCOUNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmADD_EDIT_ACCOUNTS.resx">
+      <DependentUpon>frmADD_EDIT_ACCOUNTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmADD_EDIT_INVENTORY.resx">
+      <DependentUpon>frmADD_EDIT_INVENTORY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmADD_EDIT_STOCKS.resx">
+      <DependentUpon>frmADD_EDIT_STOCKS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmADD_EDIT_VENDOR.resx">
+      <DependentUpon>frmADD_EDIT_VENDOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCASHIER.resx">
+      <DependentUpon>frmCASHIER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDASHBOARD.resx">
+      <DependentUpon>frmDASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLOGIN.resx">
+      <DependentUpon>frmLOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMAIN.resx">
+      <DependentUpon>frmMAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINVENTORY.resx">
+      <DependentUpon>frmINVENTORY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xfrmMAIN.resx">
+      <DependentUpon>xfrmMAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPRINT.resx">
+      <DependentUpon>frmPRINT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmADD_PRODUCTS.resx">
+      <DependentUpon>frmADD_PRODUCTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQUANTITY.resx">
+      <DependentUpon>frmQUANTITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSIGNUP.resx">
+      <DependentUpon>frmSIGNUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSPLASH.resx">
+      <DependentUpon>frmSPLASH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSTOCKS.resx">
+      <DependentUpon>frmSTOCKS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVENDOR.resx">
+      <DependentUpon>frmVENDOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Divider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FINAL APPOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DividerYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_64pxb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_64pxb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports_52pxb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in_inventory_64pxb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\138770317_892606114831040_8826419193165274672_n.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FINAL APPOS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_64pxr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64pxblu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_64pxbla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peso_symbol_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stocks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACKGROUND.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
