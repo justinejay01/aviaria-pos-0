@@ -24,8 +24,6 @@ F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmMAIN.resources
 F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmINVENTORY.resources
 F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmMAIN0.resources
 F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmPRINT.resources
-F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS.resources
-F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmQUANTITY.resources
 F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSIGNUP.resources
 F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSPLASH.resources
 F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSTOCKS.resources
@@ -66,3 +64,125 @@ F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.exe
 F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.pdb
 F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmACCOUNT.resources
 F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_ACCOUNTS.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_STOCKS.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_CASHIER.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_CASHIER1.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_STOCK1.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmCHECKOUT.resources
+F:\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSALES.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csprojAssemblyReference.cache
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmACCOUNT.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_ACCOUNTS.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_INVENTORY.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_STOCKS.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_VENDOR.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_CASHIER.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_CASHIER1.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmCASHIER.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmCHECKOUT.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmDASHBOARD.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmLOGIN.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmMAIN.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmINVENTORY.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSALES.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmMAIN0.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmPRINT.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_STOCKS.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_STOCK1.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSIGNUP.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSPLASH.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSTOCKS.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmVENDOR.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.Properties.Resources.resources
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csproj.GenerateResource.cache
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csproj.CoreCompileInputs.cache
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.exe
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.pdb
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.Core.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\Guna.UI2.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.barcodes.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.forms.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.io.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.kernel.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.layout.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.pdfa.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.sign.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.styledxmlparser.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.svg.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\MySql.Data.dll
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.pdb
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.Core.pdb
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.Core.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.barcodes.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.forms.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.io.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.kernel.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.layout.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.pdfa.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.sign.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.styledxmlparser.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\itext.svg.xml
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.exe.config
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.exe
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.pdb
+C:\Users\Jork Cedric\Music\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csproj.CopyComplete
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.exe.config
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.exe
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.pdb
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.exe
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\AviariaPOS.pdb
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.Core.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.barcodes.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.forms.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.io.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.kernel.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.layout.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.pdfa.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.sign.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.styledxmlparser.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.svg.dll
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.pdb
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.Core.pdb
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\Common.Logging.Core.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.barcodes.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.forms.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.io.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.kernel.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.layout.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.pdfa.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.sign.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.styledxmlparser.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\bin\Debug\itext.svg.xml
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csprojResolveAssemblyReference.cache
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmACCOUNT.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_ACCOUNTS.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_INVENTORY.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_STOCKS.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_EDIT_VENDOR.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_CASHIER.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_CASHIER1.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmCASHIER.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmCHECKOUT.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmDASHBOARD.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmLOGIN.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmMAIN.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmINVENTORY.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSALES.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmMAIN0.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmPRINT.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_STOCKS.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmADD_PRODUCTS_STOCK1.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSIGNUP.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSPLASH.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmSTOCKS.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.frmVENDOR.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.Properties.Resources.resources
+C:\Users\ODF\Desktop\AviariaPOS\AviariaPOS\obj\Debug\AviariaPOS.csproj.GenerateResource.Cache

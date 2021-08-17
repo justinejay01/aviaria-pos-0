@@ -32,7 +32,6 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnOK = new Guna.UI2.WinForms.Guna2Button();
-            this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCNumber = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,14 +44,17 @@
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cboxPword = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cboxRPword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtRPword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPword = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
-            this.cboxRPword = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.cboxPword = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2Button();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
+            this.cmbPrivilege = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -113,24 +115,6 @@
             this.btnOK.TabIndex = 9;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.CheckedState.Parent = this.btnExit;
-            this.btnExit.CustomImages.Parent = this.btnExit;
-            this.btnExit.FillColor = System.Drawing.Color.Red;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.Image = global::AviariaPOS.Properties.Resources.close;
-            this.btnExit.Location = new System.Drawing.Point(958, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(20, 20);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // guna2GroupBox1
             // 
@@ -330,11 +314,13 @@
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.cmbPrivilege);
             this.guna2GroupBox2.Controls.Add(this.cboxPword);
             this.guna2GroupBox2.Controls.Add(this.cboxRPword);
             this.guna2GroupBox2.Controls.Add(this.txtRPword);
             this.guna2GroupBox2.Controls.Add(this.txtUname);
             this.guna2GroupBox2.Controls.Add(this.txtPword);
+            this.guna2GroupBox2.Controls.Add(this.gunaLabel8);
             this.guna2GroupBox2.Controls.Add(this.gunaLabel6);
             this.guna2GroupBox2.Controls.Add(this.gunaLabel10);
             this.guna2GroupBox2.Controls.Add(this.gunaLabel11);
@@ -343,9 +329,49 @@
             this.guna2GroupBox2.Location = new System.Drawing.Point(502, 60);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(476, 300);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(476, 381);
             this.guna2GroupBox2.TabIndex = 20;
             this.guna2GroupBox2.Text = "Account Credentials";
+            // 
+            // cboxPword
+            // 
+            this.cboxPword.AutoSize = true;
+            this.cboxPword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxPword.CheckedState.BorderRadius = 2;
+            this.cboxPword.CheckedState.BorderThickness = 0;
+            this.cboxPword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxPword.Location = new System.Drawing.Point(401, 141);
+            this.cboxPword.Name = "cboxPword";
+            this.cboxPword.Size = new System.Drawing.Size(55, 19);
+            this.cboxPword.TabIndex = 31;
+            this.cboxPword.TabStop = false;
+            this.cboxPword.Text = "Show";
+            this.cboxPword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cboxPword.UncheckedState.BorderRadius = 2;
+            this.cboxPword.UncheckedState.BorderThickness = 0;
+            this.cboxPword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cboxPword.UseVisualStyleBackColor = true;
+            this.cboxPword.CheckedChanged += new System.EventHandler(this.cboxPword_CheckedChanged);
+            // 
+            // cboxRPword
+            // 
+            this.cboxRPword.AutoSize = true;
+            this.cboxRPword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxRPword.CheckedState.BorderRadius = 2;
+            this.cboxRPword.CheckedState.BorderThickness = 0;
+            this.cboxRPword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxRPword.Location = new System.Drawing.Point(401, 218);
+            this.cboxRPword.Name = "cboxRPword";
+            this.cboxRPword.Size = new System.Drawing.Size(55, 19);
+            this.cboxRPword.TabIndex = 31;
+            this.cboxRPword.TabStop = false;
+            this.cboxRPword.Text = "Show";
+            this.cboxRPword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cboxRPword.UncheckedState.BorderRadius = 2;
+            this.cboxRPword.UncheckedState.BorderThickness = 0;
+            this.cboxRPword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cboxRPword.UseVisualStyleBackColor = true;
+            this.cboxRPword.CheckedChanged += new System.EventHandler(this.cboxRPword_CheckedChanged);
             // 
             // txtRPword
             // 
@@ -454,45 +480,57 @@
             this.gunaLabel11.TabIndex = 30;
             this.gunaLabel11.Text = "Password:";
             // 
-            // cboxRPword
+            // btnExit
             // 
-            this.cboxRPword.AutoSize = true;
-            this.cboxRPword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboxRPword.CheckedState.BorderRadius = 2;
-            this.cboxRPword.CheckedState.BorderThickness = 0;
-            this.cboxRPword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboxRPword.Location = new System.Drawing.Point(401, 218);
-            this.cboxRPword.Name = "cboxRPword";
-            this.cboxRPword.Size = new System.Drawing.Size(55, 19);
-            this.cboxRPword.TabIndex = 31;
-            this.cboxRPword.TabStop = false;
-            this.cboxRPword.Text = "Show";
-            this.cboxRPword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboxRPword.UncheckedState.BorderRadius = 2;
-            this.cboxRPword.UncheckedState.BorderThickness = 0;
-            this.cboxRPword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboxRPword.UseVisualStyleBackColor = true;
-            this.cboxRPword.CheckedChanged += new System.EventHandler(this.cboxRPword_CheckedChanged);
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.CheckedState.Parent = this.btnExit;
+            this.btnExit.CustomImages.Parent = this.btnExit;
+            this.btnExit.FillColor = System.Drawing.Color.Red;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.HoverState.Parent = this.btnExit;
+            this.btnExit.Image = global::AviariaPOS.Properties.Resources.close;
+            this.btnExit.Location = new System.Drawing.Point(958, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(20, 20);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // cboxPword
+            // gunaLabel8
             // 
-            this.cboxPword.AutoSize = true;
-            this.cboxPword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboxPword.CheckedState.BorderRadius = 2;
-            this.cboxPword.CheckedState.BorderThickness = 0;
-            this.cboxPword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboxPword.Location = new System.Drawing.Point(401, 141);
-            this.cboxPword.Name = "cboxPword";
-            this.cboxPword.Size = new System.Drawing.Size(55, 19);
-            this.cboxPword.TabIndex = 31;
-            this.cboxPword.TabStop = false;
-            this.cboxPword.Text = "Show";
-            this.cboxPword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboxPword.UncheckedState.BorderRadius = 2;
-            this.cboxPword.UncheckedState.BorderThickness = 0;
-            this.cboxPword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cboxPword.UseVisualStyleBackColor = true;
-            this.cboxPword.CheckedChanged += new System.EventHandler(this.cboxPword_CheckedChanged);
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.gunaLabel8.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel8.Location = new System.Drawing.Point(13, 287);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(91, 28);
+            this.gunaLabel8.TabIndex = 25;
+            this.gunaLabel8.Text = "Privilege:";
+            // 
+            // cmbPrivilege
+            // 
+            this.cmbPrivilege.BackColor = System.Drawing.Color.Transparent;
+            this.cmbPrivilege.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbPrivilege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPrivilege.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbPrivilege.FocusedState.Parent = this.cmbPrivilege;
+            this.cmbPrivilege.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbPrivilege.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbPrivilege.FormattingEnabled = true;
+            this.cmbPrivilege.HoverState.Parent = this.cmbPrivilege;
+            this.cmbPrivilege.ItemHeight = 30;
+            this.cmbPrivilege.Items.AddRange(new object[] {
+            "Administrator",
+            "Cashier",
+            "Not Active"});
+            this.cmbPrivilege.ItemsAppearance.Parent = this.cmbPrivilege;
+            this.cmbPrivilege.Location = new System.Drawing.Point(18, 320);
+            this.cmbPrivilege.Name = "cmbPrivilege";
+            this.cmbPrivilege.ShadowDecoration.Parent = this.cmbPrivilege;
+            this.cmbPrivilege.Size = new System.Drawing.Size(438, 36);
+            this.cmbPrivilege.TabIndex = 32;
             // 
             // frmADD_EDIT_ACCOUNTS
             // 
@@ -547,5 +585,7 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel10;
         private Guna.UI.WinForms.GunaLabel gunaLabel11;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbPrivilege;
+        private Guna.UI.WinForms.GunaLabel gunaLabel8;
     }
 }

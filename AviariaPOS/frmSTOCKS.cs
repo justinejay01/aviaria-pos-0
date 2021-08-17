@@ -101,5 +101,47 @@ namespace AviariaPOS
             frmADD_EDIT_STOCKS frm = new frmADD_EDIT_STOCKS();
             frm.ShowDialog();
         }
+
+        private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 8)
+            {
+
+            }
+        }
+
+        private void dgvProducts_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex == dgvProducts.NewRowIndex || e.RowIndex < 0)
+                return;
+
+            if (e.ColumnIndex == dgvProducts.Columns["prodDelete"].Index)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                Bitmap image = Properties.Resources.trash_64pxr;
+                int h = image.Height / 2;
+                int w = image.Width / 2;
+                int x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                int y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                e.Graphics.DrawImage(image, new Rectangle(x, y, w, h));
+
+                e.Handled = true;
+            }
+
+            if (e.ColumnIndex == dgvProducts.Columns["prodEdit"].Index)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                Bitmap image = Properties.Resources.edit_64pxbla;
+                int h = image.Height / 2;
+                int w = image.Width / 2;
+                int x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                int y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                e.Graphics.DrawImage(image, new Rectangle(x, y, w, h));
+
+                e.Handled = true;
+            }
+        }
     }
 }

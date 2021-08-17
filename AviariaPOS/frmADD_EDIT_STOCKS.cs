@@ -115,7 +115,7 @@ namespace AviariaPOS
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmADD_PRODUCTS frm = new frmADD_PRODUCTS(this);
+            frmADD_PRODUCTS_STOCKS frm = new frmADD_PRODUCTS_STOCKS(this);
             frm.ShowDialog();
         }
 
@@ -142,7 +142,7 @@ namespace AviariaPOS
             {
                 int selectedIndex = dgvProducts.SelectedRows[0].Index;
 
-                frmQUANTITY frm = new frmQUANTITY(this, int.Parse(dgvProducts.Rows[selectedIndex].Cells[4].Value.ToString()), new string[] { dgvProducts.Rows[selectedIndex].Cells[5].Value.ToString(), dgvProducts.Rows[selectedIndex].Cells[6].Value.ToString() }, selectedIndex);
+                frmADD_PRODUCTS_STOCK1 frm = new frmADD_PRODUCTS_STOCK1(this, int.Parse(dgvProducts.Rows[selectedIndex].Cells[4].Value.ToString()), new string[] { dgvProducts.Rows[selectedIndex].Cells[5].Value.ToString(), dgvProducts.Rows[selectedIndex].Cells[6].Value.ToString() }, selectedIndex);
                 frm.ShowDialog();
             }
         }

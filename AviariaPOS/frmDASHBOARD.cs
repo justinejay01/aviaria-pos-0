@@ -16,5 +16,10 @@ namespace AviariaPOS
         {
             InitializeComponent();
         }
+
+        private void frmDASHBOARD_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

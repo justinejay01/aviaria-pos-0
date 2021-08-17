@@ -32,16 +32,25 @@
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pnlLogin = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblViewPass = new System.Windows.Forms.Label();
             this.cboxViewPass = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2GradientPanel1.SuspendLayout();
+            this.btnForgotPass = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlForgotPass = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.lblForgotPass = new System.Windows.Forms.Label();
+            this.btnForgotPass1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogin1 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtForgotPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pnlLogin.SuspendLayout();
+            this.pnlForgotPass.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -113,26 +122,27 @@
             // 
             this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
             // 
-            // guna2GradientPanel1
+            // pnlLogin
             // 
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel1.BorderRadius = 25;
-            this.guna2GradientPanel1.Controls.Add(this.lblViewPass);
-            this.guna2GradientPanel1.Controls.Add(this.cboxViewPass);
-            this.guna2GradientPanel1.Controls.Add(this.guna2Separator1);
-            this.guna2GradientPanel1.Controls.Add(this.label1);
-            this.guna2GradientPanel1.Controls.Add(this.btnLogin);
-            this.guna2GradientPanel1.Controls.Add(this.txtUsername);
-            this.guna2GradientPanel1.Controls.Add(this.txtPassword);
-            this.guna2GradientPanel1.Controls.Add(this.label2);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(16, 78);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(314, 448);
-            this.guna2GradientPanel1.TabIndex = 6;
+            this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLogin.BorderRadius = 25;
+            this.pnlLogin.Controls.Add(this.lblViewPass);
+            this.pnlLogin.Controls.Add(this.cboxViewPass);
+            this.pnlLogin.Controls.Add(this.guna2Separator1);
+            this.pnlLogin.Controls.Add(this.lblLogin);
+            this.pnlLogin.Controls.Add(this.btnForgotPass);
+            this.pnlLogin.Controls.Add(this.btnLogin);
+            this.pnlLogin.Controls.Add(this.txtUsername);
+            this.pnlLogin.Controls.Add(this.txtPassword);
+            this.pnlLogin.Controls.Add(this.label2);
+            this.pnlLogin.FillColor = System.Drawing.Color.Transparent;
+            this.pnlLogin.FillColor2 = System.Drawing.Color.White;
+            this.pnlLogin.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.pnlLogin.Location = new System.Drawing.Point(16, 78);
+            this.pnlLogin.Name = "pnlLogin";
+            this.pnlLogin.ShadowDecoration.Parent = this.pnlLogin;
+            this.pnlLogin.Size = new System.Drawing.Size(314, 448);
+            this.pnlLogin.TabIndex = 6;
             // 
             // lblViewPass
             // 
@@ -175,17 +185,17 @@
             this.guna2Separator1.TabIndex = 6;
             this.guna2Separator1.UseTransparentBackground = true;
             // 
-            // label1
+            // lblLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(12, 113);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 44);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "LOGIN";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLogin.Location = new System.Drawing.Point(12, 113);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(138, 44);
+            this.lblLogin.TabIndex = 3;
+            this.lblLogin.Text = "LOGIN";
             // 
             // btnLogin
             // 
@@ -236,20 +246,165 @@
             // 
             this.guna2DragControl1.TargetControl = null;
             // 
+            // btnForgotPass
+            // 
+            this.btnForgotPass.AutoRoundedCorners = true;
+            this.btnForgotPass.BorderRadius = 19;
+            this.btnForgotPass.CheckedState.Parent = this.btnForgotPass;
+            this.btnForgotPass.CustomImages.Parent = this.btnForgotPass;
+            this.btnForgotPass.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnForgotPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotPass.ForeColor = System.Drawing.Color.White;
+            this.btnForgotPass.HoverState.Parent = this.btnForgotPass;
+            this.btnForgotPass.Location = new System.Drawing.Point(92, 381);
+            this.btnForgotPass.Name = "btnForgotPass";
+            this.btnForgotPass.ShadowDecoration.Parent = this.btnForgotPass;
+            this.btnForgotPass.Size = new System.Drawing.Size(188, 40);
+            this.btnForgotPass.TabIndex = 2;
+            this.btnForgotPass.Text = "FORGOT PASSWORD";
+            this.btnForgotPass.Click += new System.EventHandler(this.btnForgotPass_Click);
+            // 
+            // pnlForgotPass
+            // 
+            this.pnlForgotPass.BackColor = System.Drawing.Color.Transparent;
+            this.pnlForgotPass.BorderRadius = 25;
+            this.pnlForgotPass.Controls.Add(this.guna2Separator2);
+            this.pnlForgotPass.Controls.Add(this.lblForgotPass);
+            this.pnlForgotPass.Controls.Add(this.btnForgotPass1);
+            this.pnlForgotPass.Controls.Add(this.btnLogin1);
+            this.pnlForgotPass.Controls.Add(this.txtForgotPass);
+            this.pnlForgotPass.Controls.Add(this.label5);
+            this.pnlForgotPass.FillColor = System.Drawing.Color.Transparent;
+            this.pnlForgotPass.FillColor2 = System.Drawing.Color.White;
+            this.pnlForgotPass.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.pnlForgotPass.Location = new System.Drawing.Point(353, 78);
+            this.pnlForgotPass.Name = "pnlForgotPass";
+            this.pnlForgotPass.ShadowDecoration.Parent = this.pnlForgotPass;
+            this.pnlForgotPass.Size = new System.Drawing.Size(314, 448);
+            this.pnlForgotPass.TabIndex = 6;
+            this.pnlForgotPass.Visible = false;
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.FillColor = System.Drawing.Color.Azure;
+            this.guna2Separator2.FillThickness = 2;
+            this.guna2Separator2.Location = new System.Drawing.Point(10, 87);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(291, 17);
+            this.guna2Separator2.TabIndex = 6;
+            this.guna2Separator2.UseTransparentBackground = true;
+            // 
+            // lblForgotPass
+            // 
+            this.lblForgotPass.AutoSize = true;
+            this.lblForgotPass.BackColor = System.Drawing.Color.Transparent;
+            this.lblForgotPass.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPass.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblForgotPass.Location = new System.Drawing.Point(12, 113);
+            this.lblForgotPass.Name = "lblForgotPass";
+            this.lblForgotPass.Size = new System.Drawing.Size(277, 33);
+            this.lblForgotPass.TabIndex = 3;
+            this.lblForgotPass.Text = "FORGOT PASSWORD";
+            // 
+            // btnForgotPass1
+            // 
+            this.btnForgotPass1.AutoRoundedCorners = true;
+            this.btnForgotPass1.BorderRadius = 19;
+            this.btnForgotPass1.CheckedState.Parent = this.btnForgotPass1;
+            this.btnForgotPass1.CustomImages.Parent = this.btnForgotPass1;
+            this.btnForgotPass1.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnForgotPass1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotPass1.ForeColor = System.Drawing.Color.White;
+            this.btnForgotPass1.HoverState.Parent = this.btnForgotPass1;
+            this.btnForgotPass1.Location = new System.Drawing.Point(92, 335);
+            this.btnForgotPass1.Name = "btnForgotPass1";
+            this.btnForgotPass1.ShadowDecoration.Parent = this.btnForgotPass1;
+            this.btnForgotPass1.Size = new System.Drawing.Size(188, 40);
+            this.btnForgotPass1.TabIndex = 2;
+            this.btnForgotPass1.Text = "FORGOT PASSWORD";
+            this.btnForgotPass1.Click += new System.EventHandler(this.btnForgotPass1_Click);
+            // 
+            // btnLogin1
+            // 
+            this.btnLogin1.AutoRoundedCorners = true;
+            this.btnLogin1.BorderRadius = 19;
+            this.btnLogin1.CheckedState.Parent = this.btnLogin1;
+            this.btnLogin1.CustomImages.Parent = this.btnLogin1;
+            this.btnLogin1.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnLogin1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin1.ForeColor = System.Drawing.Color.White;
+            this.btnLogin1.HoverState.Parent = this.btnLogin1;
+            this.btnLogin1.Location = new System.Drawing.Point(184, 381);
+            this.btnLogin1.Name = "btnLogin1";
+            this.btnLogin1.ShadowDecoration.Parent = this.btnLogin1;
+            this.btnLogin1.Size = new System.Drawing.Size(96, 40);
+            this.btnLogin1.TabIndex = 2;
+            this.btnLogin1.Text = "LOGIN";
+            this.btnLogin1.Click += new System.EventHandler(this.btnLogin1_Click);
+            // 
+            // txtForgotPass
+            // 
+            this.txtForgotPass.BackColor = System.Drawing.Color.Transparent;
+            this.txtForgotPass.BorderColor = System.Drawing.Color.Black;
+            this.txtForgotPass.BorderRadius = 15;
+            this.txtForgotPass.BorderThickness = 2;
+            this.txtForgotPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtForgotPass.DefaultText = "";
+            this.txtForgotPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtForgotPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtForgotPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtForgotPass.DisabledState.Parent = this.txtForgotPass;
+            this.txtForgotPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtForgotPass.FocusedState.BorderColor = System.Drawing.Color.Aqua;
+            this.txtForgotPass.FocusedState.Parent = this.txtForgotPass;
+            this.txtForgotPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtForgotPass.ForeColor = System.Drawing.Color.Black;
+            this.txtForgotPass.HoverState.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtForgotPass.HoverState.Parent = this.txtForgotPass;
+            this.txtForgotPass.IconLeft = global::AviariaPOS.Properties.Resources.account;
+            this.txtForgotPass.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtForgotPass.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtForgotPass.Location = new System.Drawing.Point(42, 186);
+            this.txtForgotPass.Multiline = true;
+            this.txtForgotPass.Name = "txtForgotPass";
+            this.txtForgotPass.PasswordChar = '\0';
+            this.txtForgotPass.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtForgotPass.PlaceholderText = "Recovery String";
+            this.txtForgotPass.SelectedText = "";
+            this.txtForgotPass.ShadowDecoration.Parent = this.txtForgotPass;
+            this.txtForgotPass.Size = new System.Drawing.Size(222, 96);
+            this.txtForgotPass.TabIndex = 1;
+            this.txtForgotPass.UseSystemPasswordChar = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(261, 84);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Welcome to \r\nAviaria Padua";
+            // 
             // frmLOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AviariaPOS.Properties.Resources.BACKGROUND;
             this.ClientSize = new System.Drawing.Size(926, 562);
-            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.pnlForgotPass);
+            this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLOGIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLOGIN";
-            this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
+            this.pnlLogin.ResumeLayout(false);
+            this.pnlLogin.PerformLayout();
+            this.pnlForgotPass.ResumeLayout(false);
+            this.pnlForgotPass.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -259,14 +414,22 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnlLogin;
         private System.Windows.Forms.Label lblViewPass;
         private Guna.UI2.WinForms.Guna2CustomCheckBox cboxViewPass;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLogin;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ControlBox btnExit;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Button btnForgotPass;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnlForgotPass;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        private System.Windows.Forms.Label lblForgotPass;
+        private Guna.UI2.WinForms.Guna2Button btnForgotPass1;
+        private Guna.UI2.WinForms.Guna2Button btnLogin1;
+        private Guna.UI2.WinForms.Guna2TextBox txtForgotPass;
+        private System.Windows.Forms.Label label5;
     }
 }

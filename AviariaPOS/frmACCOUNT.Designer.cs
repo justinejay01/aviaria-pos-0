@@ -34,16 +34,17 @@
             this.cmbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvAccounts = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.accountFName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountLName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountPNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountUName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountEdit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.accountDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.accountDeactivate = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,8 +124,9 @@
             this.accountPNumber,
             this.accountEmail,
             this.accountUName,
+            this.accountStatus,
             this.accountEdit,
-            this.accountDelete});
+            this.accountDeactivate});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 20F);
@@ -171,32 +173,6 @@
             this.dgvAccounts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccounts_CellContentClick);
             this.dgvAccounts.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvAccounts_CellPainting);
             // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 45F);
-            this.gunaLabel1.Location = new System.Drawing.Point(12, 9);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(278, 81);
-            this.gunaLabel1.TabIndex = 25;
-            this.gunaLabel1.Text = "Accounts";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.CheckedState.Parent = this.btnAdd;
-            this.btnAdd.CustomImages.Parent = this.btnAdd;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.HoverState.Parent = this.btnAdd;
-            this.btnAdd.Image = global::AviariaPOS.Properties.Resources.add_64px;
-            this.btnAdd.Location = new System.Drawing.Point(12, 114);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
-            this.btnAdd.Size = new System.Drawing.Size(180, 45);
-            this.btnAdd.TabIndex = 24;
-            this.btnAdd.Text = "Add Account";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // accountFName
             // 
             this.accountFName.HeaderText = "First Name";
@@ -236,6 +212,12 @@
             this.accountUName.Name = "accountUName";
             this.accountUName.ReadOnly = true;
             // 
+            // accountStatus
+            // 
+            this.accountStatus.HeaderText = "Status";
+            this.accountStatus.Name = "accountStatus";
+            this.accountStatus.ReadOnly = true;
+            // 
             // accountEdit
             // 
             this.accountEdit.FillWeight = 70F;
@@ -244,24 +226,54 @@
             this.accountEdit.Name = "accountEdit";
             this.accountEdit.ReadOnly = true;
             // 
-            // accountDelete
+            // accountDeactivate
             // 
-            this.accountDelete.FillWeight = 70F;
-            this.accountDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.accountDelete.HeaderText = "Delete";
-            this.accountDelete.Name = "accountDelete";
-            this.accountDelete.ReadOnly = true;
+            this.accountDeactivate.FillWeight = 70F;
+            this.accountDeactivate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.accountDeactivate.HeaderText = "Deactivate";
+            this.accountDeactivate.Name = "accountDeactivate";
+            this.accountDeactivate.ReadOnly = true;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(12, 9);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(307, 74);
+            this.gunaLabel1.TabIndex = 25;
+            this.gunaLabel1.Text = "Accounts";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.CheckedState.Parent = this.btnAdd;
+            this.btnAdd.CustomImages.Parent = this.btnAdd;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.HoverState.Parent = this.btnAdd;
+            this.btnAdd.Image = global::AviariaPOS.Properties.Resources.add_64px;
+            this.btnAdd.Location = new System.Drawing.Point(12, 114);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
+            this.btnAdd.Size = new System.Drawing.Size(180, 45);
+            this.btnAdd.TabIndex = 24;
+            this.btnAdd.Text = "Add Account";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmACCOUNT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::AviariaPOS.Properties.Resources.Margo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1300, 773);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cmbSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvAccounts);
             this.Controls.Add(this.gunaLabel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmACCOUNT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -287,7 +299,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn accountPNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountUName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accountStatus;
         private System.Windows.Forms.DataGridViewButtonColumn accountEdit;
-        private System.Windows.Forms.DataGridViewButtonColumn accountDelete;
+        private System.Windows.Forms.DataGridViewButtonColumn accountDeactivate;
     }
 }

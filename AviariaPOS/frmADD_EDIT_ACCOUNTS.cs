@@ -27,6 +27,12 @@ namespace AviariaPOS
             InitializeComponent();
         }
 
+        public frmADD_EDIT_ACCOUNTS(frmACCOUNT account)
+        {
+            this.account = account;
+            InitializeComponent();
+        }
+
         private void GetAccount()
         {
             try
@@ -35,7 +41,7 @@ namespace AviariaPOS
                     con = new MySqlConnection(conText);
 
                 con.Open();
-                string query = "select firstname, lastname, address, contactnumber, emailaddress, username from account where username = @username;";
+                string query = "select firstname, lastname, address, contactnumber, emailaddress, username, privilege from account where username = @username;";
                 com = new MySqlCommand(query, con);
                 com.Parameters.Add("@username", MySqlDbType.VarChar).Value = s[0];
 
@@ -51,6 +57,22 @@ namespace AviariaPOS
                         txtCNumber.Text = reader.GetString(3);
                         txtEmail.Text = reader.GetString(4);
                         txtUname.Text = reader.GetString(5);
+
+                        if (reader.GetInt32(6) == 1)
+                        {
+                            cmbPrivilege.Text = "Cashier";
+                            cmbPrivilege.Enabled = false;
+                        }
+                        else if(reader.GetInt32(6) == 0)
+                        {
+                            cmbPrivilege.Text = "Administrator";
+                            cmbPrivilege.Enabled = false;
+                        }
+                        else
+                        {
+                            cmbPrivilege.Text = "Not Active";
+                        }
+
                         txtUname.Enabled = false;
                     }
                 }
@@ -89,7 +111,20 @@ namespace AviariaPOS
                 com = new MySqlCommand(query, con);
                 com.Parameters.Add("@username", MySqlDbType.VarChar).Value = txtUname.Text;
                 com.Parameters.Add("@password", MySqlDbType.VarChar).Value = ComputeHash(txtPword.Text);
-                com.Parameters.Add("@privilege", MySqlDbType.Int16).Value = 1;
+
+                if (cmbPrivilege.Text == "Cashier")
+                {
+                    com.Parameters.Add("@privilege", MySqlDbType.Int16).Value = 1;
+                }
+                else if (cmbPrivilege.Text == "Administrator")
+                {
+                    com.Parameters.Add("@privilege", MySqlDbType.Int16).Value = 0;
+                }
+                else
+                {
+                    com.Parameters.Add("@privilege", MySqlDbType.Int16).Value = 2;
+                }
+
                 com.Parameters.Add("@firstname", MySqlDbType.VarChar).Value = txtFName.Text;
                 com.Parameters.Add("@lastname", MySqlDbType.VarChar).Value = txtLName.Text;
                 com.Parameters.Add("@address", MySqlDbType.VarChar).Value = txtAddress.Text;
@@ -99,6 +134,10 @@ namespace AviariaPOS
                 if (double.TryParse(txtCNumber.Text, out cnumber))
                 {
                     com.Parameters.Add("@contactnumber", MySqlDbType.Double).Value = cnumber;
+                }
+                else
+                {
+                    com.Parameters.Add("@contactnumber", MySqlDbType.Double).Value = null;
                 }
 
                 com.ExecuteNonQuery();
@@ -126,11 +165,24 @@ namespace AviariaPOS
                     con = new MySqlConnection(conText);
 
                 con.Open();
-                string query = "update account set password=@password, firstname=@firstname, lastname=@lastname, address=@address, contactnumber=@contactnumber, emailaddress=@emailaddress where username=@username;";
+                string query = "update account set password=@password, privilege=@privilege, firstname=@firstname, lastname=@lastname, address=@address, contactnumber=@contactnumber, emailaddress=@emailaddress where username=@username;";
                 com = new MySqlCommand(query, con);
                 com.Parameters.Add("@username", MySqlDbType.VarChar).Value = txtUname.Text;
                 com.Parameters.Add("@password", MySqlDbType.VarChar).Value = ComputeHash(txtPword.Text);
-                com.Parameters.Add("@privilege", MySqlDbType.Int16).Value = 1;
+
+                if (cmbPrivilege.Text == "Cashier")
+                {
+                    com.Parameters.Add("@privilege", MySqlDbType.Int16).Value = 1;
+                }
+                else if (cmbPrivilege.Text == "Administrator")
+                {
+                    com.Parameters.Add("@privilege", MySqlDbType.Int16).Value = 0;
+                }
+                else
+                {
+                    com.Parameters.Add("@privilege", MySqlDbType.Int16).Value = 2;
+                }
+
                 com.Parameters.Add("@firstname", MySqlDbType.VarChar).Value = txtFName.Text;
                 com.Parameters.Add("@lastname", MySqlDbType.VarChar).Value = txtLName.Text;
                 com.Parameters.Add("@address", MySqlDbType.VarChar).Value = txtAddress.Text;
@@ -209,7 +261,14 @@ namespace AviariaPOS
         {
             if (CheckPassword())
             {
-                InsertAccount();
+                if (s != null)
+                {
+                    UpdateAccount();
+                }
+                else
+                {
+                    InsertAccount();
+                }
             }
             else
             {

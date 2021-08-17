@@ -35,8 +35,6 @@
             this.pbarPrint = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.bworkPrint = new System.ComponentModel.BackgroundWorker();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.cmbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvProducts = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -52,6 +50,8 @@
             this.prodDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.printDoc = new System.Drawing.Printing.PrintDocument();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,37 +78,6 @@
             this.printPreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog.Icon")));
             this.printPreviewDialog.Name = "printPreviewDialog1";
             this.printPreviewDialog.Visible = false;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.CheckedState.Parent = this.btnPrint;
-            this.btnPrint.CustomImages.Parent = this.btnPrint;
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.HoverState.Parent = this.btnPrint;
-            this.btnPrint.Image = global::AviariaPOS.Properties.Resources.print_64px;
-            this.btnPrint.Location = new System.Drawing.Point(208, 114);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
-            this.btnPrint.Size = new System.Drawing.Size(180, 45);
-            this.btnPrint.TabIndex = 23;
-            this.btnPrint.Text = "Print Preview";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.CheckedState.Parent = this.btnAdd;
-            this.btnAdd.CustomImages.Parent = this.btnAdd;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.HoverState.Parent = this.btnAdd;
-            this.btnAdd.Image = global::AviariaPOS.Properties.Resources.add_64px;
-            this.btnAdd.Location = new System.Drawing.Point(12, 114);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
-            this.btnAdd.Size = new System.Drawing.Size(180, 45);
-            this.btnAdd.TabIndex = 24;
-            this.btnAdd.Text = "Add Stocks";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cmbSearch
             // 
@@ -165,7 +134,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProducts.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProducts.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProducts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -217,7 +186,7 @@
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvProducts.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvProducts.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dgvProducts.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProducts.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvProducts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -233,6 +202,8 @@
             this.dgvProducts.ThemeStyle.RowsStyle.Height = 40;
             this.dgvProducts.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellContentClick);
+            this.dgvProducts.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvProducts_CellPainting);
             // 
             // prodID
             // 
@@ -292,6 +263,7 @@
             this.prodEdit.HeaderText = "Edit";
             this.prodEdit.Name = "prodEdit";
             this.prodEdit.ReadOnly = true;
+            this.prodEdit.Visible = false;
             // 
             // prodDelete
             // 
@@ -300,21 +272,57 @@
             this.prodDelete.HeaderText = "Delete";
             this.prodDelete.Name = "prodDelete";
             this.prodDelete.ReadOnly = true;
+            this.prodDelete.Visible = false;
             // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 45F);
+            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.Location = new System.Drawing.Point(12, 9);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(203, 81);
+            this.gunaLabel1.Size = new System.Drawing.Size(214, 74);
             this.gunaLabel1.TabIndex = 25;
             this.gunaLabel1.Text = "Stocks";
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.CheckedState.Parent = this.btnPrint;
+            this.btnPrint.CustomImages.Parent = this.btnPrint;
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.HoverState.Parent = this.btnPrint;
+            this.btnPrint.Image = global::AviariaPOS.Properties.Resources.print_64px;
+            this.btnPrint.Location = new System.Drawing.Point(208, 114);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
+            this.btnPrint.Size = new System.Drawing.Size(180, 45);
+            this.btnPrint.TabIndex = 23;
+            this.btnPrint.Text = "Print Preview";
+            this.btnPrint.Visible = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.CheckedState.Parent = this.btnAdd;
+            this.btnAdd.CustomImages.Parent = this.btnAdd;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.HoverState.Parent = this.btnAdd;
+            this.btnAdd.Image = global::AviariaPOS.Properties.Resources.add_64px;
+            this.btnAdd.Location = new System.Drawing.Point(12, 114);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
+            this.btnAdd.Size = new System.Drawing.Size(180, 45);
+            this.btnAdd.TabIndex = 24;
+            this.btnAdd.Text = "Add Stocks";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmSTOCKS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::AviariaPOS.Properties.Resources.Margo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1300, 773);
             this.Controls.Add(this.pbarPrint);
             this.Controls.Add(this.btnPrint);
@@ -323,6 +331,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.gunaLabel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSTOCKS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -344,7 +353,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2ComboBox cmbSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvProducts;
         private System.Drawing.Printing.PrintDocument printDoc;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodID;
@@ -357,5 +365,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vendor;
         private System.Windows.Forms.DataGridViewButtonColumn prodEdit;
         private System.Windows.Forms.DataGridViewButtonColumn prodDelete;
+        public Guna.UI2.WinForms.Guna2DataGridView dgvProducts;
     }
 }

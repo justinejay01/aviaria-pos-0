@@ -36,12 +36,6 @@
             this.cmbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvProducts = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
-            this.printDoc = new System.Drawing.Printing.PrintDocument();
-            this.bworkPrint = new System.ComponentModel.BackgroundWorker();
-            this.pbarPrint = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.prodID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,16 +43,22 @@
             this.stocks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodEdit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.prodDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDoc = new System.Drawing.Printing.PrintDocument();
+            this.bworkPrint = new System.ComponentModel.BackgroundWorker();
+            this.pbarPrint = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 45F);
+            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.Location = new System.Drawing.Point(12, 9);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(284, 81);
+            this.gunaLabel1.Size = new System.Drawing.Size(304, 74);
             this.gunaLabel1.TabIndex = 18;
             this.gunaLabel1.Text = "Inventory";
             // 
@@ -119,7 +119,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProducts.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProducts.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProducts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -168,7 +168,7 @@
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvProducts.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvProducts.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dgvProducts.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProducts.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvProducts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -186,6 +186,58 @@
             this.dgvProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellContentClick);
             this.dgvProducts.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvProducts_CellPainting);
+            // 
+            // prodID
+            // 
+            this.prodID.HeaderText = "ID";
+            this.prodID.Name = "prodID";
+            this.prodID.ReadOnly = true;
+            // 
+            // prodName
+            // 
+            this.prodName.FillWeight = 80.4513F;
+            this.prodName.HeaderText = "Product Name";
+            this.prodName.Name = "prodName";
+            this.prodName.ReadOnly = true;
+            // 
+            // prodPrice
+            // 
+            this.prodPrice.FillWeight = 80.4513F;
+            this.prodPrice.HeaderText = "Price";
+            this.prodPrice.Name = "prodPrice";
+            this.prodPrice.ReadOnly = true;
+            // 
+            // prodManufacturerName
+            // 
+            this.prodManufacturerName.FillWeight = 80.4513F;
+            this.prodManufacturerName.HeaderText = "Manufacturer Name";
+            this.prodManufacturerName.Name = "prodManufacturerName";
+            this.prodManufacturerName.ReadOnly = true;
+            // 
+            // stocks
+            // 
+            this.stocks.FillWeight = 80.4513F;
+            this.stocks.HeaderText = "Stocks";
+            this.stocks.Name = "stocks";
+            this.stocks.ReadOnly = true;
+            this.stocks.Visible = false;
+            // 
+            // prodEdit
+            // 
+            this.prodEdit.FillWeight = 70F;
+            this.prodEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.prodEdit.HeaderText = "Edit";
+            this.prodEdit.Name = "prodEdit";
+            this.prodEdit.ReadOnly = true;
+            // 
+            // prodDelete
+            // 
+            this.prodDelete.FillWeight = 70F;
+            this.prodDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.prodDelete.HeaderText = "Delete";
+            this.prodDelete.Name = "prodDelete";
+            this.prodDelete.ReadOnly = true;
+            this.prodDelete.Visible = false;
             // 
             // printPreviewDialog
             // 
@@ -248,61 +300,13 @@
             this.btnAdd.Text = "Add Product";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // prodID
-            // 
-            this.prodID.HeaderText = "ID";
-            this.prodID.Name = "prodID";
-            this.prodID.ReadOnly = true;
-            // 
-            // prodName
-            // 
-            this.prodName.FillWeight = 80.4513F;
-            this.prodName.HeaderText = "Product Name";
-            this.prodName.Name = "prodName";
-            this.prodName.ReadOnly = true;
-            // 
-            // prodPrice
-            // 
-            this.prodPrice.FillWeight = 80.4513F;
-            this.prodPrice.HeaderText = "Price";
-            this.prodPrice.Name = "prodPrice";
-            this.prodPrice.ReadOnly = true;
-            // 
-            // prodManufacturerName
-            // 
-            this.prodManufacturerName.FillWeight = 80.4513F;
-            this.prodManufacturerName.HeaderText = "Manufacturer Name";
-            this.prodManufacturerName.Name = "prodManufacturerName";
-            this.prodManufacturerName.ReadOnly = true;
-            // 
-            // stocks
-            // 
-            this.stocks.FillWeight = 80.4513F;
-            this.stocks.HeaderText = "Stocks";
-            this.stocks.Name = "stocks";
-            this.stocks.ReadOnly = true;
-            // 
-            // prodEdit
-            // 
-            this.prodEdit.FillWeight = 70F;
-            this.prodEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.prodEdit.HeaderText = "Edit";
-            this.prodEdit.Name = "prodEdit";
-            this.prodEdit.ReadOnly = true;
-            // 
-            // prodDelete
-            // 
-            this.prodDelete.FillWeight = 70F;
-            this.prodDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.prodDelete.HeaderText = "Delete";
-            this.prodDelete.Name = "prodDelete";
-            this.prodDelete.ReadOnly = true;
-            // 
             // frmINVENTORY
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::AviariaPOS.Properties.Resources.Margo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1300, 773);
             this.Controls.Add(this.pbarPrint);
             this.Controls.Add(this.gunaLabel1);
@@ -311,6 +315,7 @@
             this.Controls.Add(this.cmbSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvProducts);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmINVENTORY";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

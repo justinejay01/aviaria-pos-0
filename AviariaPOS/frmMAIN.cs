@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
 
 namespace AviariaPOS
 {
@@ -16,10 +17,52 @@ namespace AviariaPOS
         Guna2Button btnGlobal;
         Guna2PictureBox pboxGlobal;
         bool isAdmin = false;
-        public frmMAIN(bool isAdmin)
+        string user = "";
+
+        string conText = "server = localhost; uid = root; password =; database = aviaria; Convert Zero Datetime = True";
+        MySqlConnection con;
+        MySqlCommand com;
+        MySqlDataReader reader;
+        public frmMAIN(bool isAdmin, string user)
         {
             this.isAdmin = isAdmin;
+            this.user = user;
             InitializeComponent();
+        }
+
+        private void GetUser()
+        {
+            try
+            {
+                if (con == null)
+                    con = new MySqlConnection(conText);
+
+                con.Open();
+                string query = "select firstname from account where username=@username;";
+                com = new MySqlCommand(query, con);
+                com.Parameters.Add("@username", MySqlDbType.VarChar).Value = user;
+
+                reader = com.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        lblWelcomeCashier.Text = "Welcome, " + reader.GetString(0);
+                    }
+                }
+
+                reader.Close();
+                reader.Dispose();
+                com.Dispose();
+                con.Close();
+                con.Dispose();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ChangeButton(Guna2Button btnTo, Guna2PictureBox pboxTo)
@@ -71,7 +114,10 @@ namespace AviariaPOS
 
         private void btnReports_Click(object sender, EventArgs e)
         {
-            ChangeButton(btnReports, pboxReports);
+            ChangeButton(btnSales, pboxSales);
+
+            frmSALES frm = new frmSALES();
+            ChangeForm(frm);
         }
 
         private void frmDASHBOARD_Load(object sender, EventArgs e)
@@ -87,6 +133,8 @@ namespace AviariaPOS
                 pnlAdmin.Visible = false;
                 frmCASHIER frm = new frmCASHIER();
                 ChangeForm(frm);
+
+                GetUser();
             }
         }
 
@@ -98,7 +146,7 @@ namespace AviariaPOS
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to exit?", Application.ProductName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Are you sure you want to log out?", Application.ProductName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 frmLOGIN frm = new frmLOGIN();
                 frm.Show();
@@ -127,6 +175,14 @@ namespace AviariaPOS
             ChangeButton(btnAccount, pboxAccount);
 
             frmACCOUNT frm = new frmACCOUNT();
+            ChangeForm(frm);
+        }
+
+        private void btnCashierTab1_Click(object sender, EventArgs e)
+        {
+            ChangeButton(btnCashierTab1, pboxCashierTab1);
+
+            frmCASHIER frm = new frmCASHIER();
             ChangeForm(frm);
         }
     }

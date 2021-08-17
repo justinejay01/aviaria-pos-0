@@ -17,7 +17,7 @@ namespace AviariaPOS
         MySqlConnection con;
         MySqlCommand com;
         MySqlDataReader reader;
-        bool isExist = false;
+        bool isAdminExist = false;
         public frmSPLASH()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace AviariaPOS
                     {
                         if (reader.GetInt32(0) != 0)
                         {
-                            isExist = true;
+                            isAdminExist = true;
                         }
                     }
                 }
@@ -70,16 +70,14 @@ namespace AviariaPOS
 
         private void bwork_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (isExist)
+            if (isAdminExist)
             {
-                frmLOGIN frm = new frmLOGIN();
-                frm.Show();
+                new frmLOGIN().Show();
                 this.Hide();
             }
             else
             {
-                frmSIGNUP frm = new frmSIGNUP();
-                frm.Show();
+                new frmSIGNUP(true).Show();
                 this.Hide();
             }
         }

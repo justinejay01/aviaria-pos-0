@@ -35,7 +35,7 @@ namespace AviariaPOS
                     con = new MySqlConnection(conText);
 
                 con.Open();
-                string query = "select firstname, lastname, address, contactnumber, emailaddress, username from account where privilege=1;";
+                string query = "select firstname, lastname, address, contactnumber, emailaddress, username, privilege from account where not privilege=0;";
                 com = new MySqlCommand(query, con);
 
                 reader = com.ExecuteReader();
@@ -44,7 +44,17 @@ namespace AviariaPOS
                 {
                     while (reader.Read())
                     {
-                        dgvAccounts.Rows.Add(new object[] { reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5) });
+                        string s = "";
+                        if (reader.GetInt32(6) == 2)
+                        {
+                            s = "Not Active";
+                        }
+                        else
+                        {
+                            s = "Active";
+                        }
+
+                        dgvAccounts.Rows.Add(new object[] { reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), s });
                     }
                 }
 
@@ -58,6 +68,38 @@ namespace AviariaPOS
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DeactivateAccount(int index)
+        {
+            if (MessageBox.Show("Are you sure you want to deactivate this account?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                try
+                {
+                    if (con == null)
+                        con = new MySqlConnection(conText);
+
+                    con.Open();
+                    string query = "update account set privilege=2 where username=@username;";
+                    com = new MySqlCommand(query, con);
+                    com.Parameters.Add("@username", MySqlDbType.VarChar).Value = dgvAccounts.Rows[index].Cells[5].Value.ToString();
+
+                    com.ExecuteNonQuery();
+
+                    MessageBox.Show("Successfully deactivated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    com.Dispose();
+                    con.Close();
+                    con.Dispose();
+
+                    LoadAccounts();
+
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -79,16 +121,18 @@ namespace AviariaPOS
 
         private void dgvAccounts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 7)
             {
                 int selectedIndex = dgvAccounts.SelectedRows[0].Index;
 
                 frmADD_EDIT_ACCOUNTS frm = new frmADD_EDIT_ACCOUNTS(this, dgvAccounts.Rows[selectedIndex].Cells[5].Value.ToString());
                 frm.ShowDialog();
             }
-            else if (e.ColumnIndex == 7)
+            else if (e.ColumnIndex == 8)
             {
+                int selectedIndex = dgvAccounts.SelectedRows[0].Index;
 
+                DeactivateAccount(selectedIndex);
             }
         }
 
@@ -97,7 +141,7 @@ namespace AviariaPOS
             if (e.RowIndex == dgvAccounts.NewRowIndex || e.RowIndex < 0)
                 return;
 
-            if (e.ColumnIndex == dgvAccounts.Columns["accountDelete"].Index)
+            if (e.ColumnIndex == dgvAccounts.Columns["accountDeactivate"].Index)
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 

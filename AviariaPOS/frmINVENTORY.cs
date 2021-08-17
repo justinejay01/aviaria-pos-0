@@ -45,7 +45,7 @@ namespace AviariaPOS
                     con = new MySqlConnection(conText);
 
                 con.Open();
-                string query = "select prodID, prodName, prodPrice, prodManufactureName, prodStocks from inventory;";
+                string query = "select prodID, prodName, prodPrice, prodManufactureName from inventory;";
                 com = new MySqlCommand(query, con);
 
                 reader = com.ExecuteReader();
@@ -54,7 +54,7 @@ namespace AviariaPOS
                 {
                     while (reader.Read())
                     {
-                        dgvProducts.Rows.Add(new object[] { reader.GetDouble(0), reader.GetString(1), reader.GetDouble(2), reader.GetString(3), reader.GetInt32(4) });
+                        dgvProducts.Rows.Add(new object[] { reader.GetDouble(0), reader.GetString(1), reader.GetDouble(2), reader.GetString(3) });
                     }
                 }
 
@@ -91,7 +91,7 @@ namespace AviariaPOS
                         con = new MySqlConnection(conText);
 
                     con.Open();
-                    string query = "select prodID, prodName, prodPrice, manufactureName, stocks from inventory where " + colName + " LIKE '%" + txtSearch.Text + "%';";
+                    string query = "select prodID, prodName, prodPrice, prodManufactureName from inventory where " + colName + " LIKE '%" + txtSearch.Text + "%';";
                     com = new MySqlCommand(query, con);
 
                     reader = com.ExecuteReader();
@@ -100,7 +100,7 @@ namespace AviariaPOS
                     {
                         while (reader.Read())
                         {
-                            dgvProducts.Rows.Add(new object[] { reader.GetDouble(0), reader.GetString(1), reader.GetDouble(2), reader.GetString(3), reader.GetInt32(4) });
+                            dgvProducts.Rows.Add(new object[] { reader.GetDouble(0), reader.GetString(1), reader.GetDouble(2), reader.GetString(3) });
                         }
                     }
 
@@ -325,7 +325,7 @@ namespace AviariaPOS
                 
                 Table tbl0 = new Table(new float[] { 11, 80, 11 }, true);
 
-                Bitmap bmp = Properties.Resources._138770317_892606114831040_8826419193165274672_n;
+                Bitmap bmp = Properties.Resources.add_64px;
                 byte[] byte_logo;
                 using (MemoryStream m_strm = new MemoryStream())
                 {
@@ -365,7 +365,7 @@ namespace AviariaPOS
                 doc.Add(tbl0);
                 tbl0.Complete();
 
-                Table tbl1 = new Table(new float[] { 10, 40, 7, 35, 10 }, true);
+                Table tbl1 = new Table(new float[] { 10, 45, 12, 35 }, true);
 
                 //cell2 = new Cell().Add(new Paragraph("Product ID#"));
                 //Paragraph col0 = new Paragraph("Product ID#");
@@ -394,8 +394,6 @@ namespace AviariaPOS
                     .Add(new Paragraph("Price").SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)));
                 tbl1.AddCell(new Cell()
                     .Add(new Paragraph("Manufacturer Name").SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)));
-                tbl1.AddCell(new Cell()
-                    .Add(new Paragraph("Stocks").SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)));
 
                 for (int i = 0; i < dgvProducts.RowCount; i++)
                 {
@@ -434,8 +432,6 @@ namespace AviariaPOS
                         .Add(new Paragraph(dgvProducts.Rows[i].Cells[2].Value.ToString())));
                     tbl1.AddCell(new Cell()
                         .Add(new Paragraph(dgvProducts.Rows[i].Cells[3].Value.ToString())));
-                    tbl1.AddCell(new Cell()
-                        .Add(new Paragraph(dgvProducts.Rows[i].Cells[4].Value.ToString())));
                 }
 
                 doc.Add(tbl1);
